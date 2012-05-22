@@ -13,7 +13,7 @@ class BookWebModule extends WebModule
                     $book = array(
                         'title' => $bookData['title'],
                         'subtitle' => $bookData['author'],
-                        'url'=> $this->buildBreadcrumbURL('detail', array('id'=>$bookData['index']))
+                        'url'=> $bookData['link']
                     );
                     $bookList[] = $book;
                 }

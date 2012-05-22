@@ -9,3 +9,4 @@ site/*/logs/*
 *-local.ini
 nbrproject
 nbproject/*
+site/nju/maps.ini
