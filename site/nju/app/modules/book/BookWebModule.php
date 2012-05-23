@@ -6,6 +6,7 @@ class BookWebModule extends WebModule
     protected function initializeForPage() {
         $controller = DataRetriever::factory('BookDataRetriever', array());
         switch ($this->page) {
+            case 'pane':
             case 'index':
                 $books = $controller->hot_books();
                 $bookList = array();
