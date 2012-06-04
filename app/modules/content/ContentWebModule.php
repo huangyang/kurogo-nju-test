@@ -199,6 +199,32 @@ class ContentWebModule extends WebModule {
                 $this->assign('description', $groupData['DESCRIPTION']);
 
 				break;
+			case 'pane':
+			    
+			    	if (!$pages = $this->loadFeedData()) {
+    					$pages = array();
+    				}
+
+    				if(count($pages)==1){
+    					$feedData = reset($pages);
+
+    					if(isset($feedData['GROUP'])){
+    						$this->redirectTo('group', array('group' => $feedData['GROUP']));
+    					}
+    					$showTitle = isset($feedData['SHOW_TITLE']) ? $feedData['SHOW_TITLE'] : true;
+    					if ($showTitle) {
+    						$this->assign('contentTitle', $feedData['TITLE']);
+    					}
+
+    					$this->setTemplatePage('content');
+    					$this->setPageTitle($feedData['TITLE']);
+    					$this->assign('contentBody', $this->getContent($feedData));
+    				}else{
+    					$this->assign('description', $this->getOptionalModuleVar('description','','strings'));
+    					$this->assign('contentPages', $pages);
+    				}
+			    
+			    break;
         }
     }
 }

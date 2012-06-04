@@ -52,7 +52,7 @@ class HomeWebModule extends WebModule {
             } catch (Exception $e) {
                 Kurogo::log(LOG_WARNING, $e->getMessage(), "home", $e->getTrace());
             }
-            
+                        
             $modulePanes[$blockName] = array(
                 'id'        => $moduleID,
                 'url'       => self::buildURLForModule($moduleID, 'index'),
