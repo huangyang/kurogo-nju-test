@@ -153,7 +153,8 @@ class NewsWebModule extends WebModule {
             'pubDate' => $date,
             'author'  => $this->htmlEncodeFeedString($story->getAuthor()),
             'subtitle'=> $this->htmlEncodeFeedString($story->getDescription()),
-            'img'     => $image ? $image->getURL() : ''
+ //           'img'     => $image ? $image->getURL() : ''
+            'img'     => "http://hotlineblog.nationaljournal.com/-partly-cloudy-t9954.jpg"
         );
         
         if ($storyID = $story->getGUID()) {
@@ -263,7 +264,9 @@ class NewsWebModule extends WebModule {
         $this->assign('date',          $date);
         $this->assign('title',         $this->htmlEncodeFeedString($story->getTitle()));
         $this->assign('author',        $this->htmlEncodeFeedString($story->getAuthor()));
-        $this->assign('image',         $this->getImageForStory($story));
+//        $this->assign('image',         $this->getImageForStory($story));
+        $this->assign('image',         "http://weather.china.xappengine.com/static/w/img/d30.png");
+        
         $this->assign('link',          $story->getLink());
         $this->assign('ajax',          $this->getArg('ajax'));
         $this->assign('showLink',      $this->showLink);
