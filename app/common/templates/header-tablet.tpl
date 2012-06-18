@@ -33,7 +33,7 @@
 {/block}
 
 {block name="containerStart"}
-  <div id="wrapper">
+  <div id="wrapper-kurogo">
     <div id="container">
       <div id="containerinset">
 {/block}

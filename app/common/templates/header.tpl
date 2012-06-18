@@ -2,6 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML Basic 1.1//EN" "http://www.w3.org/TR/xhtml-basic/xhtml-basic11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
+    
+
+    
   <meta http-equiv="content-type" content="application/xhtml+xml" charset={$charset}" />
   {if $refreshPage}
     <meta http-equiv="refresh" content="{$refreshPage}" />
@@ -105,6 +108,11 @@
   <link rel="apple-touch-icon-precomposed" href="{$smarty.const.FULL_URL_BASE|nosecure}common/images/icon.png" />
   {/block}
   {block name="additionalHeadTags"}{/block}
+  
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+  <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+ 
 </head>
 
 {capture name="breadcrumbHTML" assign="breadcrumbHTML"}

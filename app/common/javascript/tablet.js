@@ -45,7 +45,7 @@ function setContainerWrapperHeight() {
 	var wrapperHeight = window.innerHeight - navbarHeight - footerNavHeight;
 	var containerHeight = document.getElementById('container').offsetHeight;
 	
-	document.getElementById('wrapper').style.height = wrapperHeight + 'px';
+	document.getElementById('wrapper-kurogo').style.height = wrapperHeight + 'px';
 	
 	if (containerHeight < wrapperHeight) {
 	  document.getElementById('container').style.height = wrapperHeight + 'px';
@@ -99,7 +99,7 @@ function tabletInit() {
 
   document.addEventListener('touchmove', function(e) { e.preventDefault(); }, false);
   
-  containerScroller = new iScroll('wrapper', { 
+  containerScroller = new iScroll('wrapper-kurogo', { 
     checkDOMChanges: false, 
     hScrollbar: false,
     desktopCompatibility: true,
@@ -355,7 +355,7 @@ function setupSplitViewForListAndDetail(headerId, listWrapperId, detailWrapperId
         }
         detailWrapper.style.height = 'auto';
         
-        var wrapperHeight = document.getElementById('wrapper').offsetHeight;
+        var wrapperHeight = document.getElementById('wrapper-kurogo').offsetHeight;
         var headerHeight = document.getElementById(headerId).offsetHeight;
         var contentHeight = wrapperHeight - headerHeight;
         

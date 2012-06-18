@@ -1494,9 +1494,9 @@ html, body, #nonfooternav {
   margin: 0;
   position: relative;
 }
-
-#wrapper {
-	position: absolute;	/* On older OS versions "position" and "z-index" must be defined (absolute | relative), */
+/*
+#wrapper-kurogo {
+	position: absolute;	On older OS versions "position" and "z-index" must be defined (absolute | relative), */
 	top: 50px;
 	left: 0;
 	z-index: 1;			/* it seems that recent webkit is less picky and works anyway. */
